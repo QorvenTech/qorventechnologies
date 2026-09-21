@@ -495,7 +495,7 @@
     :root { --container: min(1160px, calc(100% - 48px)); --radius: 14px; }
     .accent-text { color: var(--cyan); }
     .section { padding: 72px 0; border-top: 1px solid var(--line); }
-    .section-heading { max-width: 650px; font-size: clamp(2rem, 3.4vw, 3.1rem); line-height: 1.02; }
+    .section-heading { max-width: 650px; padding-bottom: .14em; font-size: clamp(2rem, 3.4vw, 3.1rem); line-height: 1.14; overflow: visible; }
     .section-kicker, .eyebrow { margin-bottom: 12px; font-size: .66rem; letter-spacing: .16em; }
     .section-head { margin-bottom: 34px; }
     .section-intro { max-width: 380px; margin-top: 12px; font-size: .9rem; }
@@ -586,7 +586,7 @@
     .service-grid { grid-template-columns: repeat(4, 1fr); gap: 13px; border: 0; }
     .service-card { min-height: 300px; padding: 24px; border: 1px solid rgba(0, 200, 255, .16); border-radius: 12px; background: linear-gradient(150deg, rgba(11, 27, 44, .93), rgba(6, 14, 25, .98)); }
     .service-number { display: none; }
-    .service-icon { margin: 0 0 42px; }
+    .service-icon { margin: 0 0 42px; border-color: rgba(0, 200, 255, .48); background: #082039; box-shadow: inset 0 0 18px rgba(0, 200, 255, .08), 0 0 18px rgba(0, 200, 255, .06); }
     .service-card h3 { font-size: 1.12rem; }
     .service-card p { margin: 10px 0 19px; font-size: .82rem; line-height: 1.55; }
     .service-card .tags { margin-top: auto; }
@@ -628,7 +628,8 @@
     .footer-cta .container { position: relative; display: flex; min-height: 150px; align-items: center; justify-content: space-between; gap: 28px; padding: 32px 40px; overflow: hidden; border: 1px solid rgba(0, 200, 255, .35); border-radius: 12px; background: radial-gradient(circle at 92% 130%, rgba(0, 87, 231, .4), transparent 38%), linear-gradient(120deg, #0a1628, #07101c); text-align: left; }
     .footer-cta .container::after { position: absolute; right: -35px; bottom: -105px; width: 260px; height: 260px; border: 1px solid rgba(0, 200, 255, .25); border-radius: 50%; content: ""; box-shadow: 0 0 70px rgba(0, 87, 231, .25); }
     .footer-cta .section-kicker { display: none; }
-    .footer-cta h2 { max-width: 650px; margin: 0; font-size: clamp(1.8rem, 3.5vw, 3rem); }
+    .footer-cta h2 { max-width: 650px; margin: 0; padding-bottom: .14em; font-size: clamp(1.8rem, 3.5vw, 3rem); line-height: 1.16; overflow: visible; }
+    .footer-cta h2 span, .section-heading .accent-text { padding-bottom: .08em; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
     .footer-cta .btn { position: relative; z-index: 2; flex: 0 0 auto; }
     .site-footer { padding-top: 30px; }
     .footer-brand { width: 190px; }
@@ -828,25 +829,25 @@
         <div class="service-grid">
           <article class="service-card reveal">
             <span class="service-number">01 / 04</span>
-            <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3.4 3 14.6 0 18M12 3c-3 3.4-3 14.6 0 18"/></svg></div>
+            <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m8 7-5 5 5 5M16 7l5 5-5 5M14.5 4 9.5 20"/></svg></div>
             <h3>Web Development</h3><p>Responsive websites, landing pages and web apps — fast, accessible and ready to be found.</p>
             <div class="tags"><span class="tag">HTML / CSS / JS</span><span class="tag">React</span><span class="tag">SEO</span></div>
           </article>
           <article class="service-card reveal" style="--delay: 80ms">
             <span class="service-number">02 / 04</span>
-            <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="6" y="2.5" width="12" height="19" rx="2.5"/><path d="M10 18.5h4"/></svg></div>
+            <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="2.5" width="12" height="19" rx="2.5"/><path d="M10 18.5h4"/></svg></div>
             <h3>App Development</h3><p>Practical Android and cross-platform apps with dependable backends and polished release flows.</p>
             <div class="tags"><span class="tag">Android</span><span class="tag">React Native</span><span class="tag">Firebase</span></div>
           </article>
           <article class="service-card reveal">
             <span class="service-number">03 / 04</span>
-            <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M5 19 19 5M14 5h5v5M5 14v5h5"/><path d="M8 8h.01M16 16h.01"/></svg></div>
+            <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m4 20 4.6-1.1L19 8.5a2.5 2.5 0 0 0-3.5-3.5L5.1 15.4 4 20Z"/><path d="m13.8 6.7 3.5 3.5M4 20l4.6-1.1"/></svg></div>
             <h3>UI/UX Design</h3><p>Clear interfaces, purposeful flows and design systems that make complex products feel simple.</p>
             <div class="tags"><span class="tag">UX Strategy</span><span class="tag">Interface</span><span class="tag">Prototype</span></div>
           </article>
           <article class="service-card reveal" style="--delay: 80ms">
             <span class="service-number">04 / 04</span>
-            <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M18.4 5.6l-2.1 2.1M7.7 16.3l-2.1 2.1"/><circle cx="12" cy="12" r="3"/></svg></div>
+            <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2 4 14h7l-1 8 10-13h-7V2Z"/></svg></div>
             <h3>Digital Solutions</h3><p>Auth, payments, analytics, automation and deployment — the connective work that makes products run.</p>
             <div class="tags"><span class="tag">Razorpay</span><span class="tag">Automation</span><span class="tag">Cloud</span></div>
           </article>
