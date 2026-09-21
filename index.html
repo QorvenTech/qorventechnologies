@@ -495,7 +495,17 @@
     :root { --container: min(1160px, calc(100% - 48px)); --radius: 14px; }
     .accent-text { color: var(--cyan); }
     .section { padding: 72px 0; border-top: 1px solid var(--line); }
-    .section-heading { max-width: 650px; padding-bottom: .14em; font-size: clamp(2rem, 3.4vw, 3.1rem); line-height: 1.14; overflow: visible; }
+    .section-heading {
+      max-width: 650px;
+      padding: .04em 0 .22em;
+      overflow: visible;
+      font-family: var(--body);
+      font-size: clamp(2rem, 3.4vw, 3.1rem);
+      font-weight: 700;
+      line-height: 1.2;
+      letter-spacing: -.045em;
+      text-rendering: geometricPrecision;
+    }
     .section-kicker, .eyebrow { margin-bottom: 12px; font-size: .66rem; letter-spacing: .16em; }
     .section-head { margin-bottom: 34px; }
     .section-intro { max-width: 380px; margin-top: 12px; font-size: .9rem; }
@@ -628,8 +638,29 @@
     .footer-cta .container { position: relative; display: flex; min-height: 150px; align-items: center; justify-content: space-between; gap: 28px; padding: 32px 40px; overflow: hidden; border: 1px solid rgba(0, 200, 255, .35); border-radius: 12px; background: radial-gradient(circle at 92% 130%, rgba(0, 87, 231, .4), transparent 38%), linear-gradient(120deg, #0a1628, #07101c); text-align: left; }
     .footer-cta .container::after { position: absolute; right: -35px; bottom: -105px; width: 260px; height: 260px; border: 1px solid rgba(0, 200, 255, .25); border-radius: 50%; content: ""; box-shadow: 0 0 70px rgba(0, 87, 231, .25); }
     .footer-cta .section-kicker { display: none; }
-    .footer-cta h2 { max-width: 650px; margin: 0; padding-bottom: .14em; font-size: clamp(1.8rem, 3.5vw, 3rem); line-height: 1.16; overflow: visible; }
-    .footer-cta h2 span, .section-heading .accent-text { padding-bottom: .08em; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+    .footer-cta h2 {
+      max-width: 650px;
+      margin: 0;
+      padding: .04em 0 .22em;
+      overflow: visible;
+      font-family: var(--body);
+      font-size: clamp(1.8rem, 3.5vw, 3rem);
+      font-weight: 700;
+      line-height: 1.2;
+      letter-spacing: -.045em;
+      text-rendering: geometricPrecision;
+    }
+    .footer-cta h2 span,
+    .section-heading .accent-text {
+      padding: 0;
+      color: var(--cyan);
+      background: none;
+      background-clip: border-box;
+      -webkit-background-clip: border-box;
+      -webkit-text-fill-color: currentColor;
+      -webkit-box-decoration-break: slice;
+      box-decoration-break: slice;
+    }
     .footer-cta .btn { position: relative; z-index: 2; flex: 0 0 auto; }
     .site-footer { padding-top: 30px; }
     .footer-brand { width: 190px; }
