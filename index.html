@@ -661,6 +661,50 @@
       -webkit-box-decoration-break: slice;
       box-decoration-break: slice;
     }
+    .section-heading .accent-text {
+      text-shadow: 0 0 22px rgba(0, 200, 255, .16);
+    }
+    .service-icon {
+      position: relative;
+      isolation: isolate;
+      overflow: visible;
+      border-color: rgba(35, 218, 255, .82);
+      color: #35dcff;
+      background:
+        radial-gradient(circle at 32% 22%, rgba(116, 231, 255, .28), transparent 38%),
+        linear-gradient(145deg, rgba(7, 54, 86, .98), rgba(4, 29, 53, .98));
+      box-shadow:
+        inset 0 1px 0 rgba(196, 248, 255, .2),
+        inset 0 0 20px rgba(0, 200, 255, .14),
+        0 0 0 1px rgba(0, 141, 255, .08),
+        0 0 24px rgba(0, 200, 255, .2);
+    }
+    .service-icon::before {
+      position: absolute;
+      z-index: -1;
+      inset: -9px;
+      border-radius: 16px;
+      background: radial-gradient(circle, rgba(0, 200, 255, .2), transparent 68%);
+      filter: blur(8px);
+      content: "";
+      pointer-events: none;
+    }
+    .service-icon::after {
+      position: absolute;
+      top: 6px;
+      left: 9px;
+      width: 18px;
+      height: 1px;
+      background: linear-gradient(90deg, rgba(201, 249, 255, .85), transparent);
+      box-shadow: 0 0 7px rgba(77, 225, 255, .75);
+      content: "";
+      pointer-events: none;
+    }
+    .service-icon svg {
+      overflow: visible;
+      stroke-width: 2.15;
+      filter: drop-shadow(0 0 4px rgba(0, 214, 255, .72));
+    }
     .footer-cta .btn { position: relative; z-index: 2; flex: 0 0 auto; }
     .site-footer { padding-top: 30px; }
     .footer-brand { width: 190px; }
@@ -725,6 +769,8 @@
       .service-grid { grid-template-columns: 1fr; gap: 8px; }
       .service-card { display: grid; min-height: 0; padding: 12px 14px; grid-template-columns: 43px 1fr; column-gap: 12px; align-items: center; }
       .service-icon { grid-row: 1 / span 3; width: 41px; height: 41px; margin: 0; }
+      .service-icon::before { inset: -5px; opacity: .65; filter: blur(6px); }
+      .service-icon::after { top: 5px; left: 8px; width: 15px; }
       .service-card h3 { font-size: .86rem; }
       .service-card p { margin: 3px 0; font-size: .65rem; }
       .service-card .tags { display: none; }
@@ -838,7 +884,7 @@
       <div class="about-grid container">
         <div class="about-copy">
           <p class="section-kicker reveal">About Qorven</p>
-          <h2 class="section-heading reveal" style="--delay: 70ms">A small studio with a bigger purpose.</h2>
+          <h2 class="section-heading reveal" style="--delay: 70ms">A small studio with a <span class="accent-text">bigger purpose.</span></h2>
           <p class="reveal" style="--delay: 130ms">Qorven Technologies is an India-based software studio specializing in web development, mobile apps and end-to-end digital product delivery.</p>
           <p class="reveal" style="--delay: 180ms">From spiritual platforms to solar energy websites and tools for students, we build what people actually need — with clean code, thoughtful design and no half-done work.</p>
         </div>
@@ -854,7 +900,7 @@
     <section class="section services" id="services">
       <div class="container">
         <div class="section-head split">
-          <div><p class="section-kicker reveal">Services</p><h2 class="section-heading reveal" style="--delay: 70ms">What we do</h2></div>
+          <div><p class="section-kicker reveal">Services</p><h2 class="section-heading reveal" style="--delay: 70ms">What we <span class="accent-text">do</span></h2></div>
           <span class="section-index">01 — SERVICES</span>
         </div>
         <div class="service-grid">
@@ -972,7 +1018,7 @@
         <div class="reviews-empty reveal">
           <div class="reviews-empty-inner">
             <span class="reviews-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M6 17h-1a3 3 0 0 1-3-3V7a3 3 0 0 1 3-3h10a3 3 0 0 1 3 3v7a3 3 0 0 1-3 3h-5l-4 3v-3Z"/><path d="M8 9h5M8 12h3"/></svg></span>
-            <h3>Client stories, coming soon.</h3>
+            <h3>Client stories, <span class="accent-text">coming soon.</span></h3>
             <p>We’ll add reviews here only when they come directly from the people we’ve worked with.</p>
           </div>
         </div>
